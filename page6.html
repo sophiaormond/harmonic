@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0; /* Remove default margin */
+            display: flex; /* Enable flexbox */
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            text-align: center; /* Center text inside the body */
+        }
+        img {
+            max-width: 80%; /* Set max width as a percentage */
+            height: auto; /* Maintain aspect ratio */
+        }
+        button {
+            margin-top: 20px; 
+            padding: 3px 5px; 
+            font-size: 20px; 
+            background-color: #191919; 
+            color: rgb(0, 0, 0); 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+        }
+    </style>
+</head>
+<body>
+    <img src="skygirl.jpg" alt="Your Image" />
+    <button onclick="location.href='mywebsite.html'">go home</button>
+</body>
+</html>

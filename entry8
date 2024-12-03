@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            text-align: center; 
+            position: relative; /* For absolute button positioning */
+        }
+
+        .image-container {
+            width: 100%; 
+            height: 80vh; 
+            background-image: url('painter.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: background-image 2.0s ease; 
+            cursor: pointer;
+        }
+
+        .image-container:hover {
+            background-image: url('Note3.png'); 
+        }
+
+        /* Left button */
+        .left-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            font-size: 60px;
+            background-color: #000000;
+            color: #000000;
+            border: none;
+            border-radius: 0;
+            cursor: url('Leftarrow.png'), auto; /* Custom left-facing arrow cursor */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Right button */
+        .right-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            font-size: 60px;
+            background-color: #000000;
+            color: #000000;
+            border: none;
+            border-radius: 0;
+            cursor: url('right-arrow.png'), auto; /* Custom right-facing arrow cursor */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button:hover {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container" onclick="playSound()"></div> 
+
+    <!-- Left Button -->
+    <button class="left-button" onclick="location.href='entry4.html'"><</button>
+
+    <!-- Right Button -->
+    <button class="right-button" onclick="location.href='entry6.html'">></button>
+
+    <!-- Audio element, hidden by default -->
+    <audio id="subwayAudio" src="Subway sound 2.mp3"></audio>
+
+    <script>
+        // Function to play the sound when the image is clicked
+        function playSound() {
+            var audio = document.getElementById('subwayAudio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Hover Effect</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: rgb(0, 0, 0);
+      color: hsl(0, 1%, 68%);
+      position: relative; 
+    }
+
+    .image-container {
+      position: relative;
+      width: 40%; 
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+      margin-top: 90px;
+    }
+
+    #hoverImage {
+      z-index: 1;
+      cursor: pointer; 
+    }
+
+    .left-button {
+      position: absolute;
+      top: 0; 
+      left: 0; 
+      height: 100vh; 
+      font-size: 60px;
+      background-color: #000000;
+      color: #000000;
+      border: none;
+      border-radius: 0;
+      cursor: url('Leftarrow.png'), auto; 
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      width: 350px; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    
+    .right-button {
+      position: absolute;
+      top: 0; 
+      right: 0; 
+      height: 100vh; 
+      font-size: 60px;
+      background-color: #000000;
+      color: #000000;
+      border: none;
+      border-radius: 0;
+      cursor: url('right-arrow.png'), auto; 
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      width: 350px; /* Button width */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button:hover {
+      background-color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="CrumpledBall.png" alt="Crumpled Ball" id="hoverImage">
+  </div>
+
+  <audio id="backgroundAudio">
+    <source src="citysounds.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button class="left-button" onclick="window.location.href='entry12.html'">></button>
+
+  <button class="right-button" onclick="window.location.href='page111.html'">></button>
+
+  <script>
+    const backgroundAudio = document.getElementById('backgroundAudio');
+
+    document.body.addEventListener('click', () => {
+      if (backgroundAudio.paused) {
+        backgroundAudio.play()
+          .then(() => console.log("Audio is playing"))
+          .catch(error => console.error("Audio playback error:", error));
+      }
+    });
+
+    const hoverImage = document.getElementById('hoverImage');
+
+    hoverImage.addEventListener('mouseenter', () => {
+      hoverImage.src = 'LETTER1.png'; 
+      hoverImage.style.transform = 'scale(1.1)'; 
+    });
+
+    hoverImage.addEventListener('mouseleave', () => {
+      hoverImage.src = 'CrumpledBall.png'; 
+      hoverImage.style.transform = 'scale(1)'; 
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            text-align: center; 
+        }
+        .image-container {
+            width: 80%; /* Adjust the width of the container */
+            height: 80vh; /* Adjust the height of the container */
+            background-image: url('entry3.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: background-image 2.0s ease; /* Smooth transition for background image */
+            cursor: pointer;
+        }
+        .image-container:hover {
+            background-image: url('Note3.png'); /* Change to Note3.png on hover */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between the buttons */
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px; 
+            font-size: 20px; 
+            background-color: #191919; 
+            color: rgb(255, 255, 255); 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container"></div> <!-- Image container with background -->
+    <div class="button-container">
+        <button onclick="location.href='page111.html'"><</button>
+        <button onclick="location.href='page1.html'">></button>
+    </div>
+</body>
+</html>
+
+
+
+
+

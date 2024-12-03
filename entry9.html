@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            text-align: center; 
+            position: relative; 
+        }
+
+        .image-container {
+            width: 100%; 
+            height: 80vh; 
+            background-image: url('subwaysardines.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: background-image 1.8s ease; 
+            cursor: pointer;
+        }
+
+        .image-container:hover {
+            background-image: url('LETTER9.png'); 
+        }
+
+
+        .left-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            font-size: 60px;
+            background-color: #000000;
+            color: #000000;
+            border: none;
+            border-radius: 0;
+            cursor: url('Leftarrow.png'), auto; 
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            font-size: 60px;
+            background-color: #000000;
+            color: #000000;
+            border: none;
+            border-radius: 0;
+            cursor: url('right-arrow.png'), auto; 
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button:hover {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container" onclick="playSound()"></div> 
+
+    <button class="left-button" onclick="location.href='entry8.html'"><</button>
+
+    <button class="right-button" onclick="location.href='entry10.html'">></button>
+
+    <audio id="subwayAudio" src="ClosingDoors.mp3" loop></audio>
+
+    <script>
+
+        function playSound() {
+            var audio = document.getElementById('subwayAudio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
